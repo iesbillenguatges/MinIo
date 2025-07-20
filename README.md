@@ -9,11 +9,7 @@ MinIO és un sistema d’emmagatzematge d’objectes altament escalable, compati
 
 ---
 ```
-docker run -p 9000:9000 -p 9001:9001
--e "MINIO_ROOT_USER=admin"
--e "MINIO_ROOT_PASSWORD=admin123"
--v /home/xavi/minio:/data
-quay.io/minio/minio server /data --console-address ":9001"
+sudo docker run -p 9000:9000 -p 9001:9001   -e "MINIO_ROOT_USER=admin"   -e "MINIO_ROOT_PASSWORD=admin123"   quay.io/minio/minio server /data --console-address ":9001"
 ```
  
  ---
@@ -28,11 +24,11 @@ mc és una eina de línia de comandes que funciona de manera similar a aws cli, 
 ## Instal·lació de mc
 
 En Linux / macOS:
-
+```
 curl -O https://dl.min.io/client/mc/release/linux-amd64/mc
 chmod +x mc
 sudo mv mc /usr/local/bin/
-
+```
 
 ## Com es fa servir?
 
