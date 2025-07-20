@@ -8,12 +8,13 @@ MinIO és un sistema d’emmagatzematge d’objectes altament escalable, compati
     - Fàcil de desplegar, tant en local com en producció (kubernetes, cloud, etc.)
 
 ---
-
-docker run -p 9000:9000 -p 9001:9001 \
-  -e "MINIO_ROOT_USER=admin" \
-  -e "MINIO_ROOT_PASSWORD=admin123" \
-  -v /home/xavi/minio:/data \
-  quay.io/minio/minio server /data --console-address ":9001"
+```
+docker run -p 9000:9000 -p 9001:9001
+-e "MINIO_ROOT_USER=admin"
+-e "MINIO_ROOT_PASSWORD=admin123"
+-v /home/xavi/minio:/data
+quay.io/minio/minio server /data --console-address ":9001"
+```
  
  ---
 ## Què és mc (MinIO Client)?
